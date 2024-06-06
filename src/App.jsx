@@ -1,11 +1,10 @@
 import { Suspense, lazy } from "react";
-// import Signup from "./components/Signup"
+import { CircularProgress } from "@mui/material";
 const SignUp = lazy(() => import("./components/Signup"));
-
 export default function App() {
   return (
     <>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<CircularProgress />}>
         <SignUp />
       </Suspense>
     </>
